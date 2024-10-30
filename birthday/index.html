@@ -188,11 +188,13 @@
 
         var textAnimate = eval(Jscex.compile("async", function () {
 		    var together = new Date();
-		    together.setFullYear(2006,9, 31); 			
-		    together.setHours(20);					
-		    together.setMinutes(0);					
-		    together.setSeconds(0);					
-		    together.setMilliseconds(2);				
+		   together.setFullYear(2006, 9, 31);  // Year, month (0-based, so October is 9), day
+together.setHours(20);               // Hour (24-hour format)
+together.setMinutes(0);               // Minutes
+together.setSeconds(0);               // Seconds
+together.setMilliseconds(2);          // Milliseconds
+
+console.log(together);				
 
 		    $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
